@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Daniel</title>
+    <link>/blog/</link>
+    <description>Recent content on Daniel</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>Here is where I see if it is live editing</copyright>
+    <lastBuildDate>Thu, 07 Feb 2019 18:30:00 +0600</lastBuildDate>
+    
+	<atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Learning</title>
+      <link>/blog/test_post/</link>
+      <pubDate>Thu, 07 Feb 2019 18:30:00 +0600</pubDate>
+      
+      <guid>/blog/test_post/</guid>
+      <description>true  This is a test to see how I would add a post to docs.</description>
+    </item>
+    
+  </channel>
+</rss>

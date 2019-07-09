@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>danbaggett on Daniel</title>
+    <link>/authors/danbaggett/</link>
+    <description>Recent content in danbaggett on Daniel</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>Here is where I see if it is live editing</copyright>
+    <lastBuildDate>Thu, 07 Feb 2019 18:30:00 +0600</lastBuildDate>
+    
+	<atom:link href="/authors/danbaggett/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Other</title>
+      <link>/typography/</link>
+      <pubDate>Thu, 28 Sep 2017 08:00:00 +0600</pubDate>
+      
+      <guid>/typography/</guid>
+      <description>Here is a paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Heading 2 Another one. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Heading 3 Yet another, but centered! Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
+    </item>
+    
+    <item>
+      <title>Learning</title>
+      <link>/blog/test_post/</link>
+      <pubDate>Thu, 07 Feb 2019 18:30:00 +0600</pubDate>
+      
+      <guid>/blog/test_post/</guid>
+      <description>true  This is a test to see how I would add a post to docs.</description>
+    </item>
+    
+  </channel>
+</rss>

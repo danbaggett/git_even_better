@@ -1,10 +1,10 @@
 ---
-linkTitle: Docs
+linkTitle: Blog
 menu:
   main: null
   sidebar:
-    identifier: docs
+    identifier: blog
 slug: docs
-title: Documentation
+title: ""
 weight: -250
 ---

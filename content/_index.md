@@ -5,5 +5,5 @@ menu:
 title: Home
 weight: -270
 ---
-> Minimalism is not a lack of something. It’s simply the perfect amount of something.
-> — Nicholas Burroughs
+
+This is the index.md file under content so I can go back and edit. I can put whatever here. 
