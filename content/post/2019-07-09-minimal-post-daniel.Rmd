@@ -1,0 +1,12 @@
+---
+title: Minimal Post Daniel
+author: danbaggett
+date: '2019-07-09'
+slug: minimal_daniel
+categories:
+  - others
+tags: []
+authors: []
+---
+
+So where does this show up?

@@ -6,10 +6,28 @@
     <description>Recent content in Posts on Daniel</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Here is where I see if it is live editing</copyright>
-    <lastBuildDate>Thu, 23 Jul 2015 21:13:14 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 09 Jul 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Minimal Post Daniel</title>
+      <link>/post/minimal_daniel/</link>
+      <pubDate>Tue, 09 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/minimal_daniel/</guid>
+      <description>So where does this show up?</description>
+    </item>
+    
+    <item>
+      <title>Where does this go?</title>
+      <link>/post/where-does-this-go/</link>
+      <pubDate>Tue, 09 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/where-does-this-go/</guid>
+      <description>Where the hell do new posts go and why are they called Docs.</description>
+    </item>
     
     <item>
       <title>Hello R Markdown</title>

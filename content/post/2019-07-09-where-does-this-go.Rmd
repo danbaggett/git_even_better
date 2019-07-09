@@ -1,0 +1,11 @@
+---
+title: Where does this go?
+author: danbaggett
+date: '2019-07-09'
+slug: where-does-this-go
+categories: []
+tags: []
+authors: []
+---
+
+Where the hell do new posts go and why are they called Docs. 

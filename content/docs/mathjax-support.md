@@ -9,6 +9,7 @@ slug: mathjax-support
 tags:
 - config
 title: MathJax Support
+draft: true
 ---
 
 For enabling MathJax, add this to your content's frontmatter:

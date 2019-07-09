@@ -1,7 +1,7 @@
 # About Widget config
 [about]
-title = ""                            # default: .Site.Title
-description = ""                      # default: .Site.Params.info.description
+title = "Daniel Baggett"                            # default: .Site.Title
+description = "This is the about description"                      # default: .Site.Params.info.description
 logo = "/images/logo.png"             # default: "/images/logo.png"
 
 # Breadcrumbs Widget config
@@ -12,7 +12,7 @@ excludeParents = ["page"]            # default: ["page"]
 # Recent Posts Widget config
 [recent_posts]
 title = ""                            # default: "Recent Posts"
-length = 4                            # default: 5
+length = 3                            # default: 5
 excludeTypes = ["page"]               # default: ["page"]
 
 # Search Widget config

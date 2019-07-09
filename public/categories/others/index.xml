@@ -6,10 +6,19 @@
     <description>Recent content in others on Daniel</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Here is where I see if it is live editing</copyright>
-    <lastBuildDate>Mon, 25 Sep 2017 08:00:00 +0600</lastBuildDate>
+    <lastBuildDate>Tue, 09 Jul 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/others/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Minimal Post Daniel</title>
+      <link>/post/minimal_daniel/</link>
+      <pubDate>Tue, 09 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/minimal_daniel/</guid>
+      <description>So where does this show up?</description>
+    </item>
     
     <item>
       <title>Configuration File: config.toml</title>
@@ -18,7 +27,7 @@
       
       <guid>/docs/config-file/</guid>
       <description>This is the Minimo&amp;rsquo;s configuration file ( config.toml ) file of this site:
-baseURL = &amp;#34;http://www.example.com&amp;#34; title = &amp;#34;Daniel&amp;#34; # for smart copyright line, leave this blank and check [params.copyright] copyright = &amp;#34;Here is where I see if it is live editing&amp;#34; theme = &amp;#34;minimo&amp;#34; disqusShortname = &amp;#34;&amp;#34; googleAnalytics = &amp;#34;&amp;#34; Paginate = 5 preserveTaxonomyNames = true enableRobotsTXT = true # generate robots.txt # Syntax Highlighting ( https://gohugo.io/content-management/syntax-highlighting/ ) pygmentsCodefences = true enableEmoji = true # Missing translations will default to this content language defaultContentLanguage = &amp;#34;en&amp;#34; [params.</description>
+baseURL = &amp;#34;http://www.example.com&amp;#34; title = &amp;#34;Daniel&amp;#34; # for smart copyright line, leave this blank and check [params.copyright] copyright = &amp;#34;Here is where I see if it is live editing&amp;#34; theme = &amp;#34;minimo&amp;#34; disqusShortname = &amp;#34;&amp;#34; googleAnalytics = &amp;#34;&amp;#34; ignoreFiles = [&amp;#34;\\.Rmd$&amp;#34;, &amp;#34;\\.Rmarkdown$&amp;#34;, &amp;#34;_files$&amp;#34;, &amp;#34;_cache$&amp;#34;] Paginate = 5 preserveTaxonomyNames = true enableRobotsTXT = true # generate robots.txt # Syntax Highlighting ( https://gohugo.</description>
     </item>
     
   </channel>
