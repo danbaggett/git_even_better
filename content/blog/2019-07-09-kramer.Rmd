@@ -1,7 +1,7 @@
 ---
 title: People Are Naming Their Children After Creed Bratton
 author: danbaggett
-date: '2019-07-09'
+date: '2019-06-09'
 slug: kramer
 categories: []
 tags: []
@@ -32,22 +32,20 @@ ggplot(Daenerys_all, aes(x = year, y = n, color = name)) +
   xlab("Year")
 ```
 
-In 2016, more than 100 children were named after Daenerys. 
+In 2016, more than 100 children were named after the Game of Thrones character Daenerys. 
 
-This Game of Thrones experiment is pretty popular for one obvious reason: 
+**No one** named their child Daenerys before show's debut in 2011. It's safe to conclude that the show was responsible for the child's name and identity going forward in life. 
 
-**No one** named their child Daenerys before show's debut in 2011. It's safe to conclude that the show was responsible for the child's name and identity going forward in life.
-
-Working from the ever-popular [babynames dataset](https://www.kaggle.com/kaggle/us-baby-names), I wanted to see if people were naming their children after characters that closely replicated the Game of Thrones pattern.
+Working from the ever-popular [babynames dataset](https://www.kaggle.com/kaggle/us-baby-names), I wanted to see if people were naming their children after characters that closely follow the Game of Thrones pattern.
 
 Did anyone name their child [Seven like George wanted to in Seinfeld?](https://www.youtube.com/watch?v=NRUdaWZ4FN0) What about [Beans from Even Stevens,](https://www.imdb.com/name/nm0493037/) or [Phoebe from Friends?](https://en.wikipedia.org/wiki/Phoebe_Buffay)
 
-#### My critera:
+#### Criteria:
+  
+A. Less than 50 children per year shared a character's name before the respective show's debut.  
 
-A. Less than 50 children per year shared a character's name before the respective show's debut. 
-
-
-#### The results are divided into three groups. 
+***
+### The results are divided into three groups. 
 
 1. Honorable Mentions - Barely missed 25 per year mark. 
 2. Truly Odd  **< 50** uses per year before the show's debut.
