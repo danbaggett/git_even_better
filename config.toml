@@ -1,5 +1,5 @@
-baseURL = "http://www.example.com"
-title = "Daniel"
+baseURL = "https://danbaggett.netlify.com/"
+title = ""
 # for smart copyright line, leave this blank and check [params.copyright]
 copyright = "Here is where I see if it is live editing"
 
@@ -24,7 +24,7 @@ enableEmoji = true
 defaultContentLanguage = "en"
 
 [params.info]
-description = "Minimalist theme for Hugo"
+description = ""
 title404 = "Nothing's here!"
 
 [params.assets]
