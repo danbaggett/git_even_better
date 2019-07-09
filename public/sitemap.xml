@@ -33,6 +33,11 @@
   </url>
   
   <url>
+    <loc>/blog/kramer/</loc>
+    <lastmod>2019-07-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/</loc>
     <lastmod>2019-07-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -60,8 +65,13 @@
   </url>
   
   <url>
+    <loc>/test_post/</loc>
+    <lastmod>2019-05-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/blog/test_post/</loc>
-    <lastmod>2019-11-21T19:00:00+06:00</lastmod>
+    <lastmod>2019-05-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -92,6 +102,11 @@
     <loc>/tags/learning/</loc>
     <lastmod>2019-11-21T19:00:00+06:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/blog/test_post/</loc>
+    <lastmod>2019-11-21T19:00:00+06:00</lastmod>
   </url>
   
   <url>

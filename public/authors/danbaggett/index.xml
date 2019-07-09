@@ -6,7 +6,7 @@
     <description>Recent content in danbaggett on </description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Here is where I see if it is live editing</copyright>
-    <lastBuildDate>Thu, 07 Feb 2019 18:30:00 +0600</lastBuildDate>
+    <lastBuildDate>Fri, 31 May 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/authors/danbaggett/index.xml" rel="self" type="application/rss+xml" />
     
@@ -20,6 +20,32 @@
       <description>Here is a paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 Heading 2 Another one. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 Heading 3 Yet another, but centered! Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
+    </item>
+    
+    <item>
+      <title>People are naming their children after Creed Bratton.</title>
+      <link>/test_post/</link>
+      <pubDate>Fri, 31 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/test_post/</guid>
+      <description>true  If you’ve used the internet this year, you’re likely aware of the fact that people are naming their children after popular characters from HBO’s Game of Thrones.
+Maybe you’ve seen a chart like this:
+In 2016, more than 100 children were named after Daenerys.
+This Game of Thrones experiment is pretty popular for one obvious reason:
+No one named their child Daenerys before show’s debut in 2011. It’s safe to conclude that the show was responsible for the child’s name and identity going forward in life.</description>
+    </item>
+    
+    <item>
+      <title>People are naming their children after Creed Bratton.</title>
+      <link>/blog/test_post/</link>
+      <pubDate>Fri, 31 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/test_post/</guid>
+      <description>If you’ve used the internet this year, you’re likely aware of the fact that people are naming their children after popular characters from HBO’s Game of Thrones.
+Maybe you’ve seen a chart like this:
+In 2016, more than 100 children were named after Daenerys.
+This Game of Thrones experiment is pretty popular for one obvious reason:
+No one named their child Daenerys before show’s debut in 2011. It’s safe to conclude that the show was responsible for the child’s name and identity going forward in life.</description>
     </item>
     
     <item>
