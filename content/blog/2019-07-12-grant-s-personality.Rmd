@@ -8,4 +8,27 @@ tags:
   - history
   - learning
 authors: []
+draft: true
 ---
+
+```{r}
+1. Describe **President Grant's personality** using only three words. 
+2. Using your three words as headings, write 400 words to explain your reasoning. 
+3. Write three things you did not know about President Grant before taking this class.
+```{r bar type, include=TRUE, echo=FALSE}
+Grant %>% 
+  filter(Count > 4) %>% 
+  arrange(Count) %>%
+  mutate(Word = factor(Word, levels = unique(Word))) %>%
+  ggplot(aes(Word, Count, fill = Word)) + 
+  geom_col() + 
+  coord_flip() +
+  theme_minimal() +
+  scale_fill_brewer(palette = "Blues") +
+  labs(title = "Words Students Used To Describe President Grant",
+       x = " ",
+       y = " ") +
+  theme(legend.position = "none") +
+  theme(axis.text.x = element_blank())
+```
+

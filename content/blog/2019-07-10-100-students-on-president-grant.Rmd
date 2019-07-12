@@ -2,7 +2,7 @@
 title: I'm Sorry I Didn't Know That
 author: Daniel Baggett
 date: '2019-07-10'
-slug: sorry-I-did-not-know
+slug: "sorry-I-did-not-know"
 categories: []
 tags:
   - history
