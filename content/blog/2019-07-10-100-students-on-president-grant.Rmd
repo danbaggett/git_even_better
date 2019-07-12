@@ -67,13 +67,15 @@ Roughly 100 college students responded to this prompt on their latest assignment
 
 Their top answer: "I didn't know Grant was a president."
 
-**It's not that important** to know that Ulysses S. Grant was a president before taking an American History class. Presidential facts are not a quality measurement of anyone's intelligence. I'd be that most students did know, or learn this, at one point but forgot about it. I forget simple things I learned in the past all of the time. I might have even googled a picture of a $50 bill while grading papers. 
+**It's not that important** to know that Ulysses S. Grant was a president before taking an American History class. Knowledge of presidential facts is not an accurate measurement of anyone's intelligence. I forget simple things I learned in the past all the time. I might have even googled a picture of a $50 bill while grading papers. 
 
-Nearly every student that admitted to not knowing about Grant apologized or expressed embarressment for not knowing. A few told me they were just "bad at history." If almost every student is apologizing, how many more students won't admit what they don't know? Even worse, how often am I teaching things that require prior information that many students are embarressed to admit they don't possess. 
+**It is important** that nearly every student that admitted to not knowing about Grant apologized or expressed embarressment for not knowing. A few told me they were just "bad at history." If almost every student was apologetic, how many more students were afraid to admit it? Even worse, how often am I teaching things that require prior information that many students are embarressed to admit they don't have. 
 
-Using [Google Trends](https://trends.google.com/trends/?geo=US), I downloaded the top 25 related queries in connection to "Ulysses S. Grant." Related queries allowed me to see what else the *same user* was searching for. As [Nick Churick](https://ahrefs.com/blog/how-to-use-google-trends-for-keyword-research/) explains, related queries help explain a users "search journey?" 
+Using [Google Trends](https://trends.google.com/trends/?geo=US), I downloaded the top 25 related queries in connection to "Ulysses S. Grant." Related queries allow me to see what else the *same user* was searching for in connection to Ulysses S Grant. As [Nick Churick](https://ahrefs.com/blog/how-to-use-google-trends-for-keyword-research/) explains, related queries help explain a users "search journey" 
 
-To get an idea of what related queries look like, below are the top 5 related searches to Ulysses S. Grant over the last 15 years. Take a look below. "A president?" fits pretty nicely at the end of #1. 
+To get an idea of what related queries look like, below are the top 5 searches related to Ulysses S. Grant over the last 15 years. 
+  
+"A president?" sure fits pretty nicely at the end of #1. 
 
 ![Google Trends](/blog/2019-07-10-100-students-on-president-grant_files/grant_top_terms.png)  
 ***
@@ -83,7 +85,7 @@ To get an idea of what related queries look like, below are the top 5 related se
 I downloaded the related queries for the last 15 years, categorized them, and then used Rstudio to see if they could be displayed into something useful. 
 ```{r Google Trends, echo=FALSE}
 Grant_Trends %>% 
-  filter(Years == 15 & Topic != "Too General") %>% 
+  filter(Years == 15 & Topic != "Too General" & Topic != "WHAT") %>% 
   count(Topic, sort = TRUE) %>% 
   arrange(n) %>% 
   mutate(Topic = factor(Topic, levels = unique(Topic))) %>% 
@@ -98,9 +100,9 @@ Grant_Trends %>%
        y = " ")
 ```
 
-Grant's Presidency doesn't make the list. The closest association to his presidency falls under the "General Search" column. Here, the related queries were comprised of questions like: "Who was Ulysses S. Grant?" Grant's association with the Civil War isn't surprising either. I'd hesitate to extrapolate too much from this. The Civil War is incredibly popular and it's possible that the weight of the event is pulling Grant-related searches along with it. Every High School student in America will need to google the Civil War at some point and it's likely that willlead them to Grant. It's also very likely that they will soon forget what they googled. 
+Grant's Presidency doesn't make the top 25. The closest association to his presidency falls under the "General Search" column. Here, the related queries were comprised of questions like: "Who was Ulysses S. Grant?" Grant's association with the Civil War isn't surprising either. I'd hesitate to extrapolate too much from this. The Civil War is incredibly popular and it's possible that the weight of the event is pulling Grant-related searches along with it. Every High School student in America will need to google the Civil War at some point and it's likely that they'll eventually hit Grant. 
 
-The most informative part of this graph is the relatively low association of Grant with Reconstruction. Grant's Presidency spans one of the most important events in American History and I was hoping Reconstruction would rank a bit higher.  
+The most informative part of this graph is the relatively low association of Grant and Reconstruction. Grant's Presidency spans one of the most important events in American History and I was hoping Reconstruction would rank a bit higher.  
 
 ***
 
@@ -111,7 +113,7 @@ I ran the same graph below but only used related-searches for the last calendar 
 
 ```{r, echo = FALSE}
 Grant_Trends %>% 
-  filter(Years == 1 & Topic != "Too General") %>% 
+  filter(Years == 1 & Topic != "Too General" & Topic != "WHAT") %>% 
   count(Topic, sort = TRUE) %>%
   arrange(n) %>% 
   mutate(Topic = factor(Topic, levels = unique(Topic))) %>% 
@@ -127,13 +129,10 @@ Grant_Trends %>%
        y = " ")
 ```
 
-This graph shows a more even distribution of Grant-related searches. The Civil War still provides the strongest association; however, his presidency more than made it into the top 25. Why the sudden jump in Grant's presidency? I'm not really sure. All of [Eric Foner's work](https://www.amazon.com/Reconstruction-Americas-Unfinished-Revolution-1863/dp/1504739892) on Reconstruction, or [Ron Chernow's excellent biography of Grant](https://www.amazon.com/Grant-Ron-Chernow/dp/159420487X) are quite good. Maybe podcasts like [Slate's on Reconstruction](https://slate.com/human-interest/reconstruction) or [the fantastic Presidential series](https://www.washingtonpost.com/graphics/business/podcasts/presidential/?utm_term=.7197172c0aac) have made a dent. 
+This graph shows a more even distribution of Grant-related searches. The Civil War still provides the strongest association; however, his presidency more than made it into the top 25. Why the sudden jump in Grant's presidency? I'm not really sure. [Eric Foner's work](https://www.amazon.com/Reconstruction-Americas-Unfinished-Revolution-1863/dp/1504739892) on Reconstruction, or [Ron Chernow's excellent biography of Grant](https://www.amazon.com/Grant-Ron-Chernow/dp/159420487X) are quite good. Maybe podcasts like [Slate's on Reconstruction](https://slate.com/human-interest/reconstruction) or [the fantastic Presidential series](https://www.washingtonpost.com/graphics/business/podcasts/presidential/?utm_term=.7197172c0aac) have made a recent dent. 
 
 
-None of this information is particularly useful on its own. I didn't expect it to be. 
-
-**It will** be useful on Monday when I can show my students that a lot of other people also either forgot or didn't know, and that it doesn't mean their bad at something. 
-
+None of this information is particularly useful on its own. I didn't expect it to be. **It will** be useful on Monday when I can show my students that a lot of people forget basic facts, or never learned them in the first place and it absolutely does not mean they should apologize for not knowing. 
 
 
 
