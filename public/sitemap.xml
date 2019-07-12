@@ -22,6 +22,34 @@
   </url>
   
   <url>
+    <loc>/blog/grant-s-personality/</loc>
+    <lastmod>2019-07-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2019-11-21T19:00:00+06:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/history/</loc>
+    <lastmod>2019-07-12T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/learning/</loc>
+    <lastmod>2019-11-21T19:00:00+06:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/blog/100-students-on-president-grant/</loc>
+    <lastmod>2019-07-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/categories/</loc>
     <lastmod>2019-11-21T19:00:00+06:00</lastmod>
     <priority>0</priority>
@@ -70,12 +98,6 @@
   </url>
   
   <url>
-    <loc>/tags/</loc>
-    <lastmod>2019-11-21T19:00:00+06:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/tags/blog/</loc>
     <lastmod>2019-11-21T19:00:00+06:00</lastmod>
     <priority>0</priority>
@@ -89,12 +111,6 @@
   
   <url>
     <loc>/categories/features/</loc>
-    <lastmod>2019-11-21T19:00:00+06:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/learning/</loc>
     <lastmod>2019-11-21T19:00:00+06:00</lastmod>
     <priority>0</priority>
   </url>

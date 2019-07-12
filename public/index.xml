@@ -6,7 +6,7 @@
     <description>Recent content in Home on </description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Here is where I see if it is live editing</copyright>
-    <lastBuildDate>Tue, 09 Jul 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 12 Jul 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
@@ -29,6 +29,27 @@ Heading 3 Yet another, but centered! Excepteur sint occaecat cupidatat non proid
       
       <guid>/cv/</guid>
       <description>Everything below the frontmatter goes here and this is what it looks like.</description>
+    </item>
+    
+    <item>
+      <title>Grant&#39;s Personality</title>
+      <link>/blog/grant-s-personality/</link>
+      <pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/grant-s-personality/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>I&#39;m Sorry I Didn&#39;t Know That</title>
+      <link>/blog/100-students-on-president-grant/</link>
+      <pubDate>Wed, 10 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/100-students-on-president-grant/</guid>
+      <description>“Write three things you learned about Ulysses S. Grant that you didn’t already know before taking this class.”
+Roughly 100 college students responded to this prompt on their latest assignment in an American History II class I teach.
+Their top answer: “I didn’t know Grant was a president.”
+It’s not that important to know that Ulysses S. Grant was a president before taking an American History class. Presidential facts are not a quality measurement of anyone’s intelligence.</description>
     </item>
     
     <item>

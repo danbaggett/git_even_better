@@ -1,0 +1,141 @@
+---
+title: I'm Sorry I Didn't Know That
+author: Daniel Baggett
+date: '2019-07-10'
+slug: 100-students-on-president-grant
+categories: []
+tags:
+  - history
+authors: []
+draft: true
+---
+
+```{r, include = FALSE}
+library(tidyverse)
+library(knitr)
+```
+
+```{r Read In Data, include=FALSE}
+Grant_Stats <- read_csv("~/R/Class Data/Grant_Stats.csv")
+Grant_Trends <-read_csv("~/R/Class Data/Grant_Trends.csv")
+```
+
+```{r, include=FALSE}
+#Remove row numbers. 
+Grant_Stats$new <- rownames(Grant_Stats)
+rownames(Grant_Stats) <- NULL
+```
+
+```{r, include=FALSE}
+#Select two columns only
+Grant <- Grant_Stats %>% 
+  select(Word, Count)
+```
+
+```{r, include=FALSE}
+#Deal with variable types
+Grant$Word <- as.factor(Grant$Word)
+Grant$Count <- as.numeric(Grant$Count)
+
+Grant_Trends$Query <- as.factor(Grant_Trends$Query)
+Grant_Trends$Topic <- as.factor(Grant_Trends$Topic)
+```
+
+```{r, include=FALSE}
+#Get rid of NA's
+Grant <- Grant %>%
+ filter(!is.na(Count))
+```
+
+```{r change results, include=FALSE}
+Grant_Trends$Topic <- Grant_Trends$Topic %>% 
+  str_replace(fixed("CW"), "Civil War") %>% 
+  str_replace(fixed("LIN"), "Searching Lincoln") %>% 
+  str_replace(fixed("NA"), "General Seach") %>% 
+  str_replace(fixed("WHO"), "Who Was Grant?") %>% 
+  str_replace(fixed("RECON"), "Reconstruction") %>% 
+  str_replace(fixed("PRES"), "Presidency") %>% 
+  str_replace(fixed("MONEY"), "Is He On Money?")
+
+Grant_Trends$Topic <- Grant_Trends$Topic %>% replace_na("Facts or Quotes")
+  
+```
+
+"Write three things you learned about Ulysses S. Grant that *you didn't already know* before taking this class." 
+
+Roughly 100 college students responded to this prompt on their latest assignment in an American History II class I teach.  
+
+Their top answer: "I didn't know Grant was a president."
+
+**It's not that important** to know that Ulysses S. Grant was a president before taking an American History class. Presidential facts are not a quality measurement of anyone's intelligence. I'd be that most students did know, or learn this, at one point but forgot about it. I forget simple things I learned in the past all of the time. I might have even googled a picture of a $50 bill while grading papers. 
+
+Nearly every student that admitted to not knowing about Grant apologized or expressed embarressment for not knowing. A few told me they were just "bad at history." If almost every student is apologizing, how many more students won't admit what they don't know? Even worse, how often am I teaching things that require prior information that many students are embarressed to admit they don't possess. 
+
+Using [Google Trends](https://trends.google.com/trends/?geo=US), I downloaded the top 25 related queries in connection to "Ulysses S. Grant." Related queries allowed me to see what else the *same user* was searching for. As [Nick Churick](https://ahrefs.com/blog/how-to-use-google-trends-for-keyword-research/) explains, related queries help explain a users "search journey?" 
+
+To get an idea of what related queries look like, below are the top 5 related searches to Ulysses S. Grant over the last 15 years. Take a look below. "A president?" fits pretty nicely at the end of #1. 
+
+![Google Trends](/blog/2019-07-10-100-students-on-president-grant_files/grant_top_terms.png)  
+***
+
+#### What do people know about Grant?
+###### 2014-2019
+I downloaded the related queries for the last 15 years, categorized them, and then used Rstudio to see if they could be displayed into something useful. 
+```{r Google Trends, echo=FALSE}
+Grant_Trends %>% 
+  filter(Years == 15 & Topic != "Too General") %>% 
+  count(Topic, sort = TRUE) %>% 
+  arrange(n) %>% 
+  mutate(Topic = factor(Topic, levels = unique(Topic))) %>% 
+  ggplot(aes(Topic, n, fill = Topic)) +
+  geom_col() +
+  coord_flip() +
+  theme_minimal() +
+  scale_fill_brewer(palette = "RdBu") +
+  labs(title = "Top 25 Grant-Related Searches",
+       subtitle = "2004-2019, Google Trends",
+       x = " ",
+       y = " ")
+```
+
+Grant's Presidency doesn't make the list. The closest association to his presidency falls under the "General Search" column. Here, the related queries were comprised of questions like: "Who was Ulysses S. Grant?" Grant's association with the Civil War isn't surprising either. I'd hesitate to extrapolate too much from this. The Civil War is incredibly popular and it's possible that the weight of the event is pulling Grant-related searches along with it. Every High School student in America will need to google the Civil War at some point and it's likely that willlead them to Grant. It's also very likely that they will soon forget what they googled. 
+
+The most informative part of this graph is the relatively low association of Grant with Reconstruction. Grant's Presidency spans one of the most important events in American History and I was hoping Reconstruction would rank a bit higher.  
+
+***
+
+
+###### 2018-2019
+
+I ran the same graph below but only used related-searches for the last calendar year. 
+
+```{r, echo = FALSE}
+Grant_Trends %>% 
+  filter(Years == 1 & Topic != "Too General") %>% 
+  count(Topic, sort = TRUE) %>%
+  arrange(n) %>% 
+  mutate(Topic = factor(Topic, levels = unique(Topic))) %>% 
+  ggplot(aes(Topic, n, fill = Topic)) +
+  geom_col() +
+  coord_flip() +
+  theme_minimal() +
+  guides(fill = guide_legend(reverse = TRUE)) +
+  scale_fill_brewer(palette = "RdBu") +
+  labs(title = "Top 25 Ulysses S. Grant Searches",
+       subtitle = "July 2018 - July 2019, Google Trends",
+       x = " ",
+       y = " ")
+```
+
+This graph shows a more even distribution of Grant-related searches. The Civil War still provides the strongest association; however, his presidency more than made it into the top 25. Why the sudden jump in Grant's presidency? I'm not really sure. All of [Eric Foner's work](https://www.amazon.com/Reconstruction-Americas-Unfinished-Revolution-1863/dp/1504739892) on Reconstruction, or [Ron Chernow's excellent biography of Grant](https://www.amazon.com/Grant-Ron-Chernow/dp/159420487X) are quite good. Maybe podcasts like [Slate's on Reconstruction](https://slate.com/human-interest/reconstruction) or [the fantastic Presidential series](https://www.washingtonpost.com/graphics/business/podcasts/presidential/?utm_term=.7197172c0aac) have made a dent. 
+
+
+None of this information is particularly useful on its own. I didn't expect it to be. 
+
+**It will** be useful on Monday when I can show my students that a lot of other people also either forgot or didn't know, and that it doesn't mean their bad at something. 
+
+
+
+
+
+
