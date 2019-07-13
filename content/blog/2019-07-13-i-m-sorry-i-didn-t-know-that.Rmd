@@ -1,18 +1,19 @@
 ---
 title: I'm Sorry I Didn't Know That
 author: Daniel Baggett
-date: '2019-07-10'
-slug: "sorry-I-did-not-know"
-categories: []
+date: '2019-07-13'
+slug: i-m-sorry-i-didn-t-know-that
+categories:
+  - features
 tags:
   - history
 authors: []
-draft: false
 ---
 
 ```{r, include = FALSE}
 library(tidyverse)
 library(knitr)
+library(blogdown)
 ```
 
 ```{r Read In Data, include=FALSE}
@@ -133,8 +134,5 @@ This graph shows a more even distribution of Grant-related searches. The Civil W
 
 
 None of this information is particularly useful on its own. I didn't expect it to be. **It will** be useful on Monday when I can show my students that a lot of people forget basic facts, or never learned them in the first place and it absolutely does not mean they should apologize for not knowing. 
-
-
-
 
 

@@ -4,12 +4,12 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2019-11-21T19:00:00+06:00</lastmod>
+    <lastmod>2019-07-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/blog/</loc>
-    <lastmod>2019-11-21T19:00:00+06:00</lastmod>
+    <lastmod>2019-07-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -22,36 +22,31 @@
   </url>
   
   <url>
-    <loc>/blog/grant-s-personality/</loc>
-    <lastmod>2019-07-12T00:00:00+00:00</lastmod>
+    <loc>/categories/</loc>
+    <lastmod>2019-07-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/blog/i-m-sorry-i-didn-t-know-that/</loc>
+    <lastmod>2019-07-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/tags/</loc>
-    <lastmod>2019-11-21T19:00:00+06:00</lastmod>
+    <lastmod>2019-07-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/features/</loc>
+    <lastmod>2019-07-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/history/</loc>
-    <lastmod>2019-07-12T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/learning/</loc>
-    <lastmod>2019-11-21T19:00:00+06:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/blog/sorry-i-did-not-know/</loc>
-    <lastmod>2019-07-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/</loc>
-    <lastmod>2019-11-21T19:00:00+06:00</lastmod>
+    <lastmod>2019-07-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -72,11 +67,6 @@
   </url>
   
   <url>
-    <loc>/blog/will-the-serve-site-work/</loc>
-    <lastmod>2019-07-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/categories/others/</loc>
     <lastmod>2019-07-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -89,7 +79,7 @@
   
   <url>
     <loc>/authors/</loc>
-    <lastmod>2019-11-21T19:00:00+06:00</lastmod>
+    <lastmod>2019-05-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -99,25 +89,20 @@
   
   <url>
     <loc>/tags/blog/</loc>
-    <lastmod>2019-11-21T19:00:00+06:00</lastmod>
+    <lastmod>2019-05-31T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/authors/danbaggett/</loc>
-    <lastmod>2019-11-21T19:00:00+06:00</lastmod>
+    <lastmod>2019-05-31T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/categories/features/</loc>
-    <lastmod>2019-11-21T19:00:00+06:00</lastmod>
+    <loc>/tags/learning/</loc>
+    <lastmod>2019-05-31T00:00:00+00:00</lastmod>
     <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/blog/test_post/</loc>
-    <lastmod>2019-11-21T19:00:00+06:00</lastmod>
   </url>
   
   <url>

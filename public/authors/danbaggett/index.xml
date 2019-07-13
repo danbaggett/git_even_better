@@ -35,14 +35,5 @@ This Game of Thrones experiment is pretty popular for one obvious reason:
 No one named their child Daenerys before show’s debut in 2011. It’s safe to conclude that the show was responsible for the child’s name and identity going forward in life.</description>
     </item>
     
-    <item>
-      <title>Learning</title>
-      <link>/blog/test_post/</link>
-      <pubDate>Thu, 07 Feb 2019 18:30:00 +0600</pubDate>
-      
-      <guid>/blog/test_post/</guid>
-      <description>true  This is a test to see how I would add a post to docs.</description>
-    </item>
-    
   </channel>
 </rss>
