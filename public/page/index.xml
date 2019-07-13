@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Pages on </title>
+    <title>Pages on  </title>
     <link>/page/</link>
-    <description>Recent content in Pages on </description>
+    <description>Recent content in Pages on  </description>
     <generator>Hugo -- gohugo.io</generator>
-    <copyright>Here is where I see if it is live editing</copyright>
+    <copyright> </copyright>
     <lastBuildDate>Thu, 28 Sep 2017 08:00:00 +0600</lastBuildDate>
     
 	<atom:link href="/page/index.xml" rel="self" type="application/rss+xml" />
@@ -28,7 +28,7 @@ Heading 3 Yet another, but centered! Excepteur sint occaecat cupidatat non proid
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/cv/</guid>
-      <description>Everything below the frontmatter goes here and this is what it looks like.</description>
+      <description>I need to turn my CV into a PDF via markdown I guess?</description>
     </item>
     
     <item>

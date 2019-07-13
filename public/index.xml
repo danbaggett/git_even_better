@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Home on </title>
+    <title>Home on  </title>
     <link>/</link>
-    <description>Recent content in Home on </description>
+    <description>Recent content in Home on  </description>
     <generator>Hugo -- gohugo.io</generator>
-    <copyright>Here is where I see if it is live editing</copyright>
+    <copyright> </copyright>
     <lastBuildDate>Sat, 13 Jul 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
@@ -28,7 +28,7 @@ Heading 3 Yet another, but centered! Excepteur sint occaecat cupidatat non proid
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/cv/</guid>
-      <description>Everything below the frontmatter goes here and this is what it looks like.</description>
+      <description>I need to turn my CV into a PDF via markdown I guess?</description>
     </item>
     
     <item>
@@ -41,24 +41,6 @@ Heading 3 Yet another, but centered! Excepteur sint occaecat cupidatat non proid
 Roughly 100 college students responded to this prompt on their latest assignment in an American History II class I teach.
 Their top answer: “I didn’t know Grant was a president.”
 It’s not that important to know that Ulysses S. Grant was a president before taking an American History class. Knowledge of presidential facts is not an accurate measurement of anyone’s intelligence.</description>
-    </item>
-    
-    <item>
-      <title>Minimal Post Daniel</title>
-      <link>/post/minimal_daniel/</link>
-      <pubDate>Tue, 09 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/post/minimal_daniel/</guid>
-      <description>So where does this show up?</description>
-    </item>
-    
-    <item>
-      <title>Where does this go?</title>
-      <link>/post/where-does-this-go/</link>
-      <pubDate>Tue, 09 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/post/where-does-this-go/</guid>
-      <description>Where the hell do new posts go and why are they called Docs.</description>
     </item>
     
     <item>
@@ -84,17 +66,6 @@ Maybe you’ve seen a chart like this:
 In 2016, more than 100 children were named after Daenerys.
 This Game of Thrones experiment is pretty popular for one obvious reason:
 No one named their child Daenerys before show’s debut in 2011. It’s safe to conclude that the show was responsible for the child’s name and identity going forward in life.</description>
-    </item>
-    
-    <item>
-      <title>Hello R Markdown</title>
-      <link>/post/2015-07-23-r-rmarkdown/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
-      
-      <guid>/post/2015-07-23-r-rmarkdown/</guid>
-      <description>R Markdown This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
-You can embed an R code chunk like this:
-summary(cars) ## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.98 ## 3rd Qu.</description>
     </item>
     
     <item>

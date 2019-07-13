@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>blog on </title>
+    <title>blog on  </title>
     <link>/tags/blog/</link>
-    <description>Recent content in blog on </description>
+    <description>Recent content in blog on  </description>
     <generator>Hugo -- gohugo.io</generator>
-    <copyright>Here is where I see if it is live editing</copyright>
+    <copyright> </copyright>
     <lastBuildDate>Fri, 31 May 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/blog/index.xml" rel="self" type="application/rss+xml" />

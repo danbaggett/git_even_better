@@ -140,7 +140,8 @@ ggplot(Creed_All, aes(x = year, y = n)) +
 ```
 To be fair, Creed was on the rise before The Office debuted in 2005; however, It's safe to say that some of the inspiration is from the character depicted on the show.  
 
-### Too weird for literally anyone. 
+### Too weird for literally anyone.  
+
 No one, and I mean no one, has named their child after [Beans](https://www.youtube.com/watch?v=NXOISYS5ubY&t=29s) from Even Stevens. When Shia LaBeouf filmed himself watching himself in all of the movies he has ever starred in, he cried [in only one](https://www.youtube.com/watch?v=NXOISYS5ubY&t=29s).
 
 
