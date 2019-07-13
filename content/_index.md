@@ -6,4 +6,5 @@ title: Home
 weight: -270
 ---
 
-I write about dumb stuff here. 
+git_even - content - index.md
+I can put markdown content here, images, whatever. 

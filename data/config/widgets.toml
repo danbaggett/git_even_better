@@ -21,7 +21,7 @@ title = "Search"                      # default: "Search"
 
 # Sidebar Menu Widget config
 [sidebar_menu]
-title = "What "                            # default: ""
+title = " "                            # default: ""
 mirror = ""                           # default: ""
 
 # Social Menu Widget config

@@ -24,7 +24,7 @@ enableEmoji = true
 defaultContentLanguage = "en"
 
 [params.info]
-description = "Is the"
+description = " "
 title404 = "Nothing's here!"
 
 [params.assets]
@@ -110,8 +110,8 @@ enable = false
 issueTerm = "pathname" # pathname / url / title
 
 [params.comments.utterances.github]
-username = "MunifTanjim"
-repository = "minimo"
+username = " "
+repository = " "
 
 [params.search]
 client = "fuse" # algolia / fuse / lunr
@@ -131,10 +131,10 @@ tag = "tags"
 page = "/:slug/"
 
 [[menu.main]]
-name = "Repo"
+name = "Github"
 weight = -10
 identifier = "repository"
-url = "https://github.com/MunifTanjim/minimo"
+url = "https://github.com/danbaggett"
 
 [blackfriday]
 hrefTargetBlank = true
