@@ -31,10 +31,10 @@
     
     <item>
       <title>I&#39;m Sorry I Didn&#39;t Know That</title>
-      <link>/blog/i-m-sorry-i-didn-t-know-that/</link>
+      <link>/post/i-m-sorry-i-didn-t-know-that/</link>
       <pubDate>Sat, 13 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>/blog/i-m-sorry-i-didn-t-know-that/</guid>
+      <guid>/post/i-m-sorry-i-didn-t-know-that/</guid>
       <description>“Write three things you learned about Ulysses S. Grant that you didn’t already know before taking this class.”
 Roughly 100 college students responded to this prompt on their latest assignment in an American History II class I teach.
 Their top answer: “I didn’t know Grant was a president.”
@@ -42,11 +42,20 @@ It’s not that important to know that Ulysses S. Grant was a president before t
     </item>
     
     <item>
+      <title>Will this get tagged to blog?</title>
+      <link>/post/will-this-get-tagged-to-blog/</link>
+      <pubDate>Sat, 13 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/will-this-get-tagged-to-blog/</guid>
+      <description>So does this pull to blog?</description>
+    </item>
+    
+    <item>
       <title>People Are Naming Their Children After Creed Bratton</title>
-      <link>/blog/kramer/</link>
+      <link>/post/kramer/</link>
       <pubDate>Sun, 09 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>/blog/kramer/</guid>
+      <guid>/post/kramer/</guid>
       <description>If you’ve used the internet this year, you’re likely aware of the fact that people are naming their children after popular characters from HBO’s Game of Thrones.
 Maybe you’ve seen a chart like this:
 In 2016, more than 100 children were named after the Game of Thrones character Daenerys.

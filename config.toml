@@ -136,6 +136,11 @@ weight = -230
 identifier = "repository"
 url = "https://github.com/danbaggett"
 
+[[menu.main]]
+name = "Blog"
+weight = -250
+url = "/post/"
+
 [blackfriday]
 hrefTargetBlank = true
 
