@@ -132,7 +132,7 @@ page = "/:slug/"
 
 [[menu.main]]
 name = "Github"
-weight = -10
+weight = -230
 identifier = "repository"
 url = "https://github.com/danbaggett"
 

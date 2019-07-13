@@ -9,16 +9,21 @@
   
   <url>
     <loc>/blog/</loc>
-    <lastmod>2019-07-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/typography/</loc>
-    <lastmod>2017-09-28T08:00:00+06:00</lastmod>
   </url>
   
   <url>
     <loc>/cv/</loc>
+    <lastmod>2017-09-28T08:00:00+06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/contact/</loc>
+  </url>
+  
+  <url>
+    <loc>/blog/</loc>
+    <lastmod>2019-07-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
