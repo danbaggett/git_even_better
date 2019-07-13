@@ -1,6 +1,6 @@
 ---
 title: People Are Naming Their Children After Creed Bratton
-author: danbaggett
+author: Daniel Baggett
 date: '2019-06-09'
 slug: kramer
 categories: []
