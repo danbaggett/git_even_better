@@ -4,7 +4,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2019-07-13T00:00:00+00:00</lastmod>
+    <lastmod>2019-07-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -18,19 +18,30 @@
   
   <url>
     <loc>/categories/</loc>
-    <lastmod>2019-07-13T00:00:00+00:00</lastmod>
+    <lastmod>2019-07-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/post/exploring-the-largest-100-churches-in-america/</loc>
+    <lastmod>2019-07-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/</loc>
+    <lastmod>2019-07-26T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/church/</loc>
+    <lastmod>2019-07-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/post/i-m-sorry-i-didn-t-know-that/</loc>
     <lastmod>2019-07-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/</loc>
-    <lastmod>2019-07-13T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>

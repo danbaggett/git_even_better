@@ -1,0 +1,161 @@
+---
+title: Looking At The Largest 100 Churches In America
+author: Daniel Baggett
+date: '2019-07-26'
+slug: exploring-the-largest-100-churches-in-america
+categories:
+  - church
+tags: []
+authors: []
+---
+```{r include=FALSE}
+library(tidyverse)
+```
+
+```{r include=FALSE}
+top_coded <- read_csv("~/R/top_100_churches/top_coded.csv")
+```
+
+Each year, [Outreach Magazine](https://outreachmagazine.com/) publishes the "Outreach 100." Lifeway Research and Outreach Magazine colloborate to survey churches, verify the data, and then compile lists. Their annual reports detail the fastest growing churches in America and the largest chuches in America. A lot of the information is available for free on their website. 
+
+The data on the website is great, but I wanted to visualize what was available for free in a different way. Every church on the "Outreach 100" has an HTML Table associated with it. Using Rstudio I was able to arrange the HTML tables into something more useful. 
+
+### For Example:
+
+```{r echo=FALSE}
+top_coded %>% 
+  filter(year == 2018) %>% 
+  top_n(25, attendance) %>% 
+  mutate(church = fct_reorder(church, attendance)) %>% 
+  ggplot(aes(church, attendance, fill = church)) +
+  geom_col() +
+  coord_flip() +
+  labs(title = "25 Largest Churches in America",
+       subtitle = "2018",
+       caption = "Outreach Magazine", 
+       x = "Church", 
+       y = "Attendance") +
+  theme(legend.position="none") 
+```
+
+The graphic above shows the largest 25 churches in America for 2018 according to Lifeway and Outreach Magazine. quick glance at the list above sparks a lot of questions that I'd love to answer here; however, *I will only work with data that is available for free* on their website. I'll work though five exploratory thoughts I had after I initially got the data. If you're interested in the code, you can find it on github. 
+  
+<br/>
+
+## 5 Questions Answered
+#### 1. How do the 100 largest churches break down in regards to affiliation?
+
+```{r echo=FALSE}
+top_coded %>% 
+  filter(year == 2018) %>% 
+  top_n(100, attendance) %>% 
+  count(affiliation) %>% 
+  mutate(affiliation = fct_reorder(affiliation, n)) %>% 
+  ggplot(aes(affiliation, n, fill = affiliation)) +
+  geom_col() +
+  coord_flip() +
+  theme_minimal() +
+  labs(title = "100 Largest Churches By Affiliation",
+       subtitle = "2018", 
+       x = "Affiliation", 
+       y = "Number of Churches in Top 100 Attendance List") +
+  theme(legend.position="none") 
+```
+
+I anticipated nondenominational churches to dominate the 2018 list; still, I didn't expect it to be *that* After looking at the list above, I visited the websites of 10-15 churches graphic above that *do* declare their affiliation. Even the affiliated churches seem hesitant to broadcast which denomination they belong to.
+
+<br/>
+
+### 2. Are large churches still growing?
+
+```{r echo=FALSE}
+raw_growth_four_years <- top_coded %>% 
+  group_by(church, affiliation) %>% 
+  summarise(raw_growth = sum(growth_by_number)) %>% 
+  ungroup() %>% 
+  arrange(desc(raw_growth)) %>% 
+  filter(raw_growth > 3000)
+
+#Even though I filtered out the levels before - this was the only way to get rid of the extra ones. 
+raw_growth_four_years$church <- fct_drop(raw_growth_four_years$church)
+
+
+raw_growth_four_years %>% 
+  mutate(church = fct_reorder(church, raw_growth)) %>% 
+  ggplot(aes(church, raw_growth, fill = affiliation)) +
+  geom_col() +
+  coord_flip() +
+  labs(title = "Raw Numerical Growth",
+       subtitle = "2015 - 2018", 
+       y = "People Added", 
+       x = "Church") +
+  theme(legend.title=element_blank())
+```
+
+* The graphic above only includes the last four years because it is all that is available via Outreach. I also filtered the graphic down to churches that added at least 3,000 people in the last four years to make it managable to read. 
+
+* [Church of the Highlands](https://www.churchofthehighlands.com/) stands out on nearly every graphic I make. They have added 15,000 people in four years. It's is simply incredible.   
+
+<br/>
+
+### 3. The Rise of Multisite?
+
+```{r echo=FALSE}
+top_coded %>% 
+  top_n(100, attendance) %>% 
+  filter(year == 2018 & locations >= 3) %>% 
+  mutate(church = fct_reorder(church, locations)) %>% 
+  ggplot(aes(church, locations, fill = church)) +
+  geom_col() +
+  labs(title = "Largest Multisite Churches In America", 
+       subtitle = "Number of Campuses Per Church - 2018",
+       x = "Church",
+       y = "Number of Locations") +
+  coord_flip() +
+  theme(legend.position="none")
+```
+
+### 4. How big are the multisite campuses?
+
+```{r echo=FALSE}
+top_coded %>% 
+  filter(year == 2018 & attendance > 12500) %>% 
+  mutate(location_ratio = attendance / locations) %>% 
+  mutate(church = fct_reorder(church, location_ratio) %>% fct_rev()) %>% 
+  ggplot(aes(church, location_ratio, fill = church)) +
+  geom_col() +
+  coord_flip() +
+  theme_minimal() +
+  guides(fill=guide_legend(title=NULL)) +
+  labs(title = "Attendees to Campus Ratio", 
+       subtitle = "Churches Over 12k - Year 2018", 
+       x = "Churches Over 10k In Attendance", 
+       y = "Attendees Divided By Number Of Campuses") +
+    theme(legend.position="none")
+```
+
+* Obviously, the ratio above does not represent the exact amount of people at each campus. I just wanted to get an idea of each church's philosophy on when they thought it was time to plant a new church, or when it was time to add add a satellite campus. 
+
+* I also wanted to see the rate at which churches were adding campuses. The dataset does not allow me to see number of campuses added year by year. 
+
+#### Final Thoughts
+
+* A bevy of nondenominational churches are quickly creating networks of smaller churches that share core beliefs, values etc. so that people can experience something similar whereever they go. A cynic would say that nondenominational churches are slowly creating... denominations. I think the situation requires more nuance. 
+
+<br/> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

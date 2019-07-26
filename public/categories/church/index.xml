@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>church on  </title>
+    <link>/categories/church/</link>
+    <description>Recent content in church on  </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright> </copyright>
+    <lastBuildDate>Fri, 26 Jul 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/church/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Looking At The Largest 100 Churches In America</title>
+      <link>/post/exploring-the-largest-100-churches-in-america/</link>
+      <pubDate>Fri, 26 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/exploring-the-largest-100-churches-in-america/</guid>
+      <description>Each year, Outreach Magazine publishes the “Outreach 100.” Lifeway Research and Outreach Magazine colloborate to survey churches, verify the data, and then compile lists. Their annual reports detail the fastest growing churches in America and the largest chuches in America. A lot of the information is available for free on their website.
+The data on the website is great, but I wanted to visualize what was available for free in a different way.</description>
+    </item>
+    
+  </channel>
+</rss>
