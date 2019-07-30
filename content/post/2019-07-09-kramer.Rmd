@@ -1,5 +1,5 @@
 ---
-title: People Are Naming Their Children After Creed Bratton
+title: People Are Naming Their Children After Creed Bratton 
 author: Daniel Baggett
 date: '2019-06-09'
 slug: kramer
@@ -7,7 +7,6 @@ categories: []
 tags: []
 authors: []
 ---
-
 ```{r library chunk, echo=FALSE, include=FALSE}
 library(tidyverse)
 library(babynames)
@@ -18,37 +17,36 @@ library(blogdown)
 library(rmd)
 library(tinytex)
 ```
+![](/post/2019-07-09-kramer_files/Creed.png)
 
 If you've used the internet this year, you're likely aware of the fact that people are naming their children after popular characters from HBO's Game of Thrones. 
-
-Maybe you've seen a chart like this:
 
 ```{r Daenerys All, echo = FALSE}
 Daenerys_all <- babynames %>% filter(name == "Daenerys" & sex == "F")
 ggplot(Daenerys_all, aes(x = year, y = n, color = name)) + 
   geom_line(size = 1.0) +
-  labs(title = "Sweetie, you are named after the Mother of Dragons") +
+  labs(title = "Children Named Daenerys") +
   ylab("Number of Children") +
-  xlab("Year")
+  xlab("Year") +
+  theme(legend.title=element_blank())
 ```
 
-In 2016, more than 100 children were named after the Game of Thrones character Daenerys. 
+The data shows that **no one** in America named their child Daenerys before show's debut in 2011. By 2016, more than 100 families were choosing the name Daenerys. The memes are coming to life! ![](/post/2019-07-09-kramer_files/Danny Meme.png)
 
-**No one** named their child Daenerys before show's debut in 2011. It's safe to conclude that the show was responsible for the child's name and identity going forward in life. 
 
-Working from the ever-popular [babynames dataset](https://www.kaggle.com/kaggle/us-baby-names), I wanted to see if people were naming their children after characters that closely follow the Game of Thrones pattern.
+Working from the ever-popular [babynames dataset](https://www.kaggle.com/kaggle/us-baby-names), I wanted to see if people were naming their children after characters that closely follow the Game of Thrones pattern. Essentially, I was looking for truly odd character names from television that have never, or almost never, been used before in American History dating back to 1880.
 
-Did anyone name their child [Seven like George wanted to in Seinfeld?](https://www.youtube.com/watch?v=NRUdaWZ4FN0) What about [Beans from Even Stevens,](https://www.imdb.com/name/nm0493037/) or [Phoebe from Friends?](https://en.wikipedia.org/wiki/Phoebe_Buffay)
+For example, did anyone name their child [Seven like George wanted to in Seinfeld?](https://www.youtube.com/watch?v=NRUdaWZ4FN0) What about [Beans from Even Stevens,](https://www.imdb.com/name/nm0493037/) or [Phoebe from Friends?](https://en.wikipedia.org/wiki/Phoebe_Buffay)
 
-#### Criteria:
+#### Criteria
   
-A. Less than 50 children per year shared a character's name before the respective show's debut.  
+To be **truly odd** like Daenerys, less than 50 children per year could share a character's name before the year of the show's debut. 
 
 ***
 ### The results are divided into three groups. 
 
-1. Honorable Mentions - Barely missed 25 per year mark. 
-2. Truly Odd  **< 50** uses per year before the show's debut.
+1. Honorable Mentions - (Barely exceeded 50 names per year before show's debut.) 
+2. Truly Odd  (**< 50** uses per year before the show's debut.)
 3. Too weird for any parent.
 
 ***
@@ -63,7 +61,8 @@ ggplot(honorable_mentions, aes(x = year, y = n, color = name)) +
   geom_line(size = .9) +
   labs(title = "Honorable Mentions") +
   xlab("Year") +
-  ylab("Children Named")
+  ylab("Children Named") +
+  theme(legend.title=element_blank())
 ```
 
 1. Lorelei, Gilmore Girls (2000 to 2007)
@@ -73,7 +72,7 @@ ggplot(honorable_mentions, aes(x = year, y = n, color = name)) +
 
 The popularity of the Big Bang Theory spawned a prequel of a show inside of a show that is **still running.** I figured Sheldon would be a lot higher. 
 
-Even though Phoebe missed the cut, the data shows that Friends has transformed Phoebe into a moderately popular named when compared to it's past frequency. 
+Even though Phoebe missed the cut, the data shows that Friends has transformed Phoebe into a moderately popular name when compared to it's past frequency. 
 
 ***
 
@@ -85,7 +84,8 @@ ggplot(Odd_Names, aes(x = year, y = n, color = name)) +
                   geom_line(size = 1.0) +
                   labs(title = "Truly Odd Names from TV Shows") +
                   xlab("Year") +
-                  ylab("Number of Children Named")
+                  ylab("Number of Children Named") +
+  theme(legend.title=element_blank())
 ```
 
 1. Creed, The Office (2005)
@@ -126,22 +126,28 @@ truly_odd_means %>% mutate(name = fct_reorder(name, mean)) %>%
   coord_flip() +
   labs(title = "Average per year after show debut.") +
   ylab("Average Per Year During Show Run") +
-  xlab("Names")
+  xlab("Names") +
+  theme(legend.title=element_blank())
 
 ```
 
 
-I then figured that Creed must have been a very popular name sometime in the past and now it is just coming back into style.
+I then figured that Creed must have been a very popular name sometime in the past and it is *just now* coming back into style.
+<br/>
+
 ```{r Bonus Creed, echo=FALSE}
 Creed_All <- babynames %>% filter(name == "Creed" & sex == "M")
 ggplot(Creed_All, aes(x = year, y = n)) + 
   geom_line() + 
-  labs(title = "Children Named Creed Since 1880")
+  labs(title = "Children Named Creed Since 1880",
+       y = "Children Named Creed")
 ```
+<br/>
 To be fair, Creed was on the rise before The Office debuted in 2005; however, It's safe to say that some of the inspiration is from the character depicted on the show.  
+<br/>
 
 ### Too weird for literally anyone.  
 
-No one, and I mean no one, has named their child after [Beans](https://www.youtube.com/watch?v=NXOISYS5ubY&t=29s) from Even Stevens. When Shia LaBeouf filmed himself watching himself in all of the movies he has ever starred in, he cried [in only one](https://www.youtube.com/watch?v=NXOISYS5ubY&t=29s).
+No one, and I mean no one, has named their child after [Beans](https://www.youtube.com/watch?v=NXOISYS5ubY&t=29s) from Even Stevens. When Shia LaBeouf filmed himself watching himself in all of the movies he has ever starred in, he cried [in only one](https://www.youtube.com/watch?v=NXOISYS5ubY&t=29s). ![](/post/2019-07-09-kramer_files/Shia Crying.png)
 
 
