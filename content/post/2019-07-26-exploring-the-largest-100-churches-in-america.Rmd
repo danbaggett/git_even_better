@@ -16,9 +16,9 @@ library(tidyverse)
 top_coded <- read_csv("~/R/top_100_churches/top_coded.csv")
 ```
 
-Each year, [Outreach Magazine](https://outreachmagazine.com/) publishes the "Outreach 100." Lifeway Research and Outreach Magazine colloborate to survey churches, verify the data, and then compile lists. Their annual reports detail the fastest growing churches in America and the largest chuches in America. A lot of the information is available for free on their website. 
+Each year, [Outreach Magazine](https://outreachmagazine.com/) and [Lifeway Research](https://lifewayresearch.com/) colloborate to produce the "Outreach 100." The two companies survey churches, verify data, and then compile lists of the fastest growing churches and the largest churches in America. They've recently made some of this information available for free on their [website.](https://outreachmagazine.com/outreach-100-list.html#/list/2015/all)
 
-The data on the website is great, but I wanted to visualize what was available for free in a different way. Every church on the "Outreach 100" has an HTML Table associated with it. Using Rstudio I was able to arrange the HTML tables into something more useful. 
+I wanted to visualize some of their data. Every church on the "Outreach 100" has an HTML Table associated with it. Using R I was able to arrange the HTML tables into something more useful. 
 
 ### For Example:
 
@@ -38,8 +38,8 @@ top_coded %>%
   theme(legend.position="none") 
 ```
 
-The graphic above shows the largest 25 churches in America for 2018 according to Lifeway and Outreach Magazine. quick glance at the list above sparks a lot of questions that I'd love to answer here; however, *I will only work with data that is available for free* on their website. I'll work though five exploratory thoughts I had after I initially got the data. If you're interested in the code, you can find it on github. 
-  
+A quick glance at the list above sparks a lot of questions that I'd love to answer here; however, *I will only work with data that is available for free* on their [website](https://outreachmagazine.com/outreach-100.html). I'll work though a few exploratory visualizations I made. If you're interested in the code, you can find it on github. 
+
 <br/>
 
 ## 5 Questions Answered
@@ -58,11 +58,12 @@ top_coded %>%
   labs(title = "100 Largest Churches By Affiliation",
        subtitle = "2018", 
        x = "Affiliation", 
-       y = "Number of Churches in Top 100 Attendance List") +
+       y = "Number of Churches in Top 100 Attendance List",
+       caption = "Outreach Magazine") +
   theme(legend.position="none") 
 ```
 
-I anticipated nondenominational churches to dominate the 2018 list; still, I didn't expect it to be *that* After looking at the list above, I visited the websites of 10-15 churches graphic above that *do* declare their affiliation. Even the affiliated churches seem hesitant to broadcast which denomination they belong to.
+* I anticipated nondenominational churches to dominate the 2018 list; still, I didn't expect it to be this overwhelming. Also, I visited the websites of 10-15 churches that **do** declare their affiliation. I was looking to see how, or if, they communicated their respective denomination. Many of the churches on the list make their respecitve affiliation difficult to find. 
 
 <br/>
 
@@ -92,13 +93,19 @@ raw_growth_four_years %>%
   theme(legend.title=element_blank())
 ```
 
-* The graphic above only includes the last four years because it is all that is available via Outreach. I also filtered the graphic down to churches that added at least 3,000 people in the last four years to make it managable to read. 
+* [Church of the Highlands](https://www.churchofthehighlands.com/) stands out in nearly every graphic I make. They have added 15,000 people in four years. It's kind of staggering.  
 
-* [Church of the Highlands](https://www.churchofthehighlands.com/) stands out on nearly every graphic I make. They have added 15,000 people in four years. It's is simply incredible.   
+
+* Alabama's population is approximately [4.8 million.](https://factfinder.census.gov/faces/nav/jsf/pages/community_facts.xhtml?src=bkmk) This means that Church of the Highlands represents *nearly 1%* of Alabama's population and they are still growing rapidly. No other church on the list comes close to this kind of population / state ratio.  
+
+
+* The data above only includes the last four years because it is all that is available via Outreach. I also filtered the data down to churches that added at least 3,000 people in the last four years to make it managable to read. 
+
+
 
 <br/>
 
-### 3. The Rise of Multisite?
+### 3. Two looks at multisite models. 
 
 ```{r echo=FALSE}
 top_coded %>% 
@@ -114,8 +121,6 @@ top_coded %>%
   coord_flip() +
   theme(legend.position="none")
 ```
-
-### 4. How big are the multisite campuses?
 
 ```{r echo=FALSE}
 top_coded %>% 
@@ -134,7 +139,7 @@ top_coded %>%
     theme(legend.position="none")
 ```
 
-* Obviously, the ratio above does not represent the exact amount of people at each campus. I just wanted to get an idea of each church's philosophy on when they thought it was time to plant a new church, or when it was time to add add a satellite campus. 
+* Obviously, the second graphic does not represent the exact amount of people at **each** campus. I wanted to get an idea of each church's philosophy in regards to when they thought it was time to plant a new church, or when they believed it was time to add a satellite campus. 
 
 * I also wanted to see the rate at which churches were adding campuses. The dataset does not allow me to see number of campuses added year by year. 
 

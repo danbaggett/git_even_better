@@ -2,13 +2,13 @@
 <html lang='en'><head>
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='Each year, Outreach Magazine publishes the “Outreach 100.” Lifeway Research and Outreach Magazine colloborate to survey churches, verify the data, and then compile lists. Their annual reports detail the fastest growing churches in America and the largest chuches in America. A lot of the information is available for free on their website.
-The data on the website is great, but I wanted to visualize what was available for free in a different way.'>
+<meta name='description' content='Each year, Outreach Magazine and Lifeway Research colloborate to produce the “Outreach 100.” The two companies survey churches, verify data, and then compile lists of the fastest growing churches and the largest churches in America. They’ve recently made some of this information available for free on their website.
+I wanted to visualize some of their data. Every church on the “Outreach 100” has an HTML Table associated with it. Using R I was able to arrange the HTML tables into something more useful.'>
 <meta name='theme-color' content='#00ffd5'>
 
 <meta property='og:title' content='Looking At The Largest 100 Churches In America •  '>
-<meta property='og:description' content='Each year, Outreach Magazine publishes the “Outreach 100.” Lifeway Research and Outreach Magazine colloborate to survey churches, verify the data, and then compile lists. Their annual reports detail the fastest growing churches in America and the largest chuches in America. A lot of the information is available for free on their website.
-The data on the website is great, but I wanted to visualize what was available for free in a different way.'>
+<meta property='og:description' content='Each year, Outreach Magazine and Lifeway Research colloborate to produce the “Outreach 100.” The two companies survey churches, verify data, and then compile lists of the fastest growing churches and the largest churches in America. They’ve recently made some of this information available for free on their website.
+I wanted to visualize some of their data. Every church on the “Outreach 100” has an HTML Table associated with it. Using R I was able to arrange the HTML tables into something more useful.'>
 <meta property='og:url' content='/post/exploring-the-largest-100-churches-in-america/'>
 <meta property='og:site_name' content=' '>
 <meta property='og:type' content='article'><meta property='article:section' content='post'><meta property='article:published_time' content='2019-07-26T00:00:00Z'/><meta property='article:modified_time' content='2019-07-26T00:00:00Z'/><meta name='twitter:card' content='summary'>
@@ -168,12 +168,12 @@ The data on the website is great, but I wanted to visualize what was available f
   
 
 
-<p>Each year, <a href="https://outreachmagazine.com/">Outreach Magazine</a> publishes the “Outreach 100.” Lifeway Research and Outreach Magazine colloborate to survey churches, verify the data, and then compile lists. Their annual reports detail the fastest growing churches in America and the largest chuches in America. A lot of the information is available for free on their website.</p>
-<p>The data on the website is great, but I wanted to visualize what was available for free in a different way. Every church on the “Outreach 100” has an HTML Table associated with it. Using Rstudio I was able to arrange the HTML tables into something more useful.</p>
+<p>Each year, <a href="https://outreachmagazine.com/">Outreach Magazine</a> and <a href="https://lifewayresearch.com/">Lifeway Research</a> colloborate to produce the “Outreach 100.” The two companies survey churches, verify data, and then compile lists of the fastest growing churches and the largest churches in America. They’ve recently made some of this information available for free on their <a href="https://outreachmagazine.com/outreach-100-list.html#/list/2015/all">website.</a></p>
+<p>I wanted to visualize some of their data. Every church on the “Outreach 100” has an HTML Table associated with it. Using R I was able to arrange the HTML tables into something more useful.</p>
 <div id="for-example" class="section level3">
 <h3>For Example:</h3>
 <p><img src="/post/2019-07-26-exploring-the-largest-100-churches-in-america_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
-<p>The graphic above shows the largest 25 churches in America for 2018 according to Lifeway and Outreach Magazine. quick glance at the list above sparks a lot of questions that I’d love to answer here; however, <em>I will only work with data that is available for free</em> on their website. I’ll work though five exploratory thoughts I had after I initially got the data. If you’re interested in the code, you can find it on github.</p>
+<p>A quick glance at the list above sparks a lot of questions that I’d love to answer here; however, <em>I will only work with data that is available for free</em> on their <a href="https://outreachmagazine.com/outreach-100.html">website</a>. I’ll work though a few exploratory visualizations I made. If you’re interested in the code, you can find it on github.</p>
 <p><br/></p>
 </div>
 <div id="questions-answered" class="section level2">
@@ -181,27 +181,27 @@ The data on the website is great, but I wanted to visualize what was available f
 <div id="how-do-the-100-largest-churches-break-down-in-regards-to-affiliation" class="section level4">
 <h4>1. How do the 100 largest churches break down in regards to affiliation?</h4>
 <p><img src="/post/2019-07-26-exploring-the-largest-100-churches-in-america_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
-<p>I anticipated nondenominational churches to dominate the 2018 list; still, I didn’t expect it to be <em>that</em> After looking at the list above, I visited the websites of 10-15 churches graphic above that <em>do</em> declare their affiliation. Even the affiliated churches seem hesitant to broadcast which denomination they belong to.</p>
+<ul>
+<li>I anticipated nondenominational churches to dominate the 2018 list; still, I didn’t expect it to be this overwhelming. Also, I visited the websites of 10-15 churches that <strong>do</strong> declare their affiliation. I was looking to see how, or if, they communicated their respective denomination. Many of the churches on the list make their respecitve affiliation difficult to find.</li>
+</ul>
 <p><br/></p>
 </div>
 <div id="are-large-churches-still-growing" class="section level3">
 <h3>2. Are large churches still growing?</h3>
 <p><img src="/post/2019-07-26-exploring-the-largest-100-churches-in-america_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
 <ul>
-<li><p>The graphic above only includes the last four years because it is all that is available via Outreach. I also filtered the graphic down to churches that added at least 3,000 people in the last four years to make it managable to read.</p></li>
-<li><p><a href="https://www.churchofthehighlands.com/">Church of the Highlands</a> stands out on nearly every graphic I make. They have added 15,000 people in four years. It’s is simply incredible.</p></li>
+<li><p><a href="https://www.churchofthehighlands.com/">Church of the Highlands</a> stands out in nearly every graphic I make. They have added 15,000 people in four years. It’s kind of staggering.</p></li>
+<li><p>Alabama’s population is approximately <a href="https://factfinder.census.gov/faces/nav/jsf/pages/community_facts.xhtml?src=bkmk">4.8 million.</a> This means that Church of the Highlands represents <em>nearly 1%</em> of Alabama’s population and they are still growing rapidly. No other church on the list comes close to this kind of population / state ratio.</p></li>
+<li><p>The data above only includes the last four years because it is all that is available via Outreach. I also filtered the data down to churches that added at least 3,000 people in the last four years to make it managable to read.</p></li>
 </ul>
 <p><br/></p>
 </div>
-<div id="the-rise-of-multisite" class="section level3">
-<h3>3. The Rise of Multisite?</h3>
+<div id="two-looks-at-multisite-models." class="section level3">
+<h3>3. Two looks at multisite models.</h3>
 <p><img src="/post/2019-07-26-exploring-the-largest-100-churches-in-america_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
-</div>
-<div id="how-big-are-the-multisite-campuses" class="section level3">
-<h3>4. How big are the multisite campuses?</h3>
 <p><img src="/post/2019-07-26-exploring-the-largest-100-churches-in-america_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
 <ul>
-<li><p>Obviously, the ratio above does not represent the exact amount of people at each campus. I just wanted to get an idea of each church’s philosophy on when they thought it was time to plant a new church, or when it was time to add add a satellite campus.</p></li>
+<li><p>Obviously, the second graphic does not represent the exact amount of people at <strong>each</strong> campus. I wanted to get an idea of each church’s philosophy in regards to when they thought it was time to plant a new church, or when they believed it was time to add a satellite campus.</p></li>
 <li><p>I also wanted to see the rate at which churches were adding campuses. The dataset does not allow me to see number of campuses added year by year.</p></li>
 </ul>
 <div id="final-thoughts" class="section level4">

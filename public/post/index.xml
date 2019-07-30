@@ -17,8 +17,8 @@
       <pubDate>Fri, 26 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>/post/exploring-the-largest-100-churches-in-america/</guid>
-      <description>Each year, Outreach Magazine publishes the “Outreach 100.” Lifeway Research and Outreach Magazine colloborate to survey churches, verify the data, and then compile lists. Their annual reports detail the fastest growing churches in America and the largest chuches in America. A lot of the information is available for free on their website.
-The data on the website is great, but I wanted to visualize what was available for free in a different way.</description>
+      <description>Each year, Outreach Magazine and Lifeway Research colloborate to produce the “Outreach 100.” The two companies survey churches, verify data, and then compile lists of the fastest growing churches and the largest churches in America. They’ve recently made some of this information available for free on their website.
+I wanted to visualize some of their data. Every church on the “Outreach 100” has an HTML Table associated with it. Using R I was able to arrange the HTML tables into something more useful.</description>
     </item>
     
     <item>
