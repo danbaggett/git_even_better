@@ -70,9 +70,9 @@ ggplot(honorable_mentions, aes(x = year, y = n, color = name)) +
 3. Rory, Gilmore Girls (2000 to 2007)
 4. Sheldon, Big Bang Theory (2007 to It Will Never End)
 
-The popularity of the Big Bang Theory spawned a prequel of a show inside of a show that is **still running.** I figured Sheldon would be a lot higher. 
+The Big Bang Theory was popular enough to spawn a prequel of a show inside of a show that is **still running.** I figured Sheldon would be a lot higher. 
 
-Even though Phoebe missed the cut, the data shows that Friends has transformed Phoebe into a moderately popular name when compared to it's past frequency. 
+Even though Phoebe missed the cut, the data shows that Friends transformed Phoebe into a moderately popular name when compared to it's past usage. 
 
 ***
 
@@ -132,7 +132,7 @@ truly_odd_means %>% mutate(name = fct_reorder(name, mean)) %>%
 ```
 
 
-I then figured that Creed must have been a very popular name sometime in the past and it is *just now* coming back into style.
+I then figured that Creed must have been a very popular name sometime in the past and the name is *just now* coming back into style.
 <br/>
 
 ```{r Bonus Creed, echo=FALSE}

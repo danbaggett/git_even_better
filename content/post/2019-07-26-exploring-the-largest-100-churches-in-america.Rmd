@@ -42,7 +42,6 @@ A quick glance at the list above sparks a lot of questions that I'd love to answ
 
 <br/>
 
-## 5 Questions Answered
 #### 1. How do the 100 largest churches break down in regards to affiliation?
 
 ```{r echo=FALSE}
