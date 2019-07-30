@@ -31,7 +31,7 @@ ggplot(Daenerys_all, aes(x = year, y = n, color = name)) +
   theme(legend.title=element_blank())
 ```
 
-The data shows that **no one** in America named their child Daenerys before show's debut in 2011. By 2016, more than 100 families were choosing the name Daenerys. The memes are coming to life! ![](/post/2019-07-09-kramer_files/Danny Meme.png)
+The data shows that **no one** in America named their child Daenerys before the show's debut in 2011. By 2016, more than 100 families were choosing the name Daenerys. The memes are coming to life! ![](/post/2019-07-09-kramer_files/Danny Meme.png)
 
 
 Working from the ever-popular [babynames dataset](https://www.kaggle.com/kaggle/us-baby-names), I wanted to see if people were naming their children after characters that closely follow the Game of Thrones pattern. Essentially, I was looking for truly odd character names from television that have never, or almost never, been used before in American History dating back to 1880.
