@@ -141,6 +141,17 @@ name = "Blog"
 weight = -250
 url = "/post/"
 
+[[menu.main]]
+name = "Blog"
+weight = -250
+url = "/post/"
+
+[[menu.main]]
+name = "CV"
+weight = -210
+url = "https://drive.google.com/file/d/1CEpI9zJJUF6UzgEA32K_ORHVJ0bA41Af/view?usp=sharing"
+
+
 [blackfriday]
 hrefTargetBlank = true
 

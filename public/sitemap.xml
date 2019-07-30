@@ -8,11 +8,6 @@
   </url>
   
   <url>
-    <loc>/cv/</loc>
-    <lastmod>2017-09-28T08:00:00+06:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/contact/</loc>
   </url>
   
@@ -96,17 +91,16 @@
   </url>
   
   <url>
-    <loc>/page/</loc>
-    <lastmod>2017-09-28T08:00:00+06:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>/tags/config/</loc>
   </url>
   
   <url>
     <loc>/tags/og/</loc>
+  </url>
+  
+  <url>
+    <loc>/page/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
