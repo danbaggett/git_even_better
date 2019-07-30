@@ -38,7 +38,7 @@ top_coded %>%
   theme(legend.position="none") 
 ```
 
-A quick glance at the list above sparks a lot of questions that I'd love to answer here; however, *I will only work with data that is available for free* on their [website](https://outreachmagazine.com/outreach-100.html). I'll work though a few exploratory visualizations I made. If you're interested in the code, you can find it on github. 
+A quick glance at the list above sparks a lot of questions that I'd love to answer here; however, *I will only work with data that is available for free* on their [website](https://outreachmagazine.com/outreach-100.html). I'll work though a few exploratory visualizations I made. 
 
 <br/>
 
