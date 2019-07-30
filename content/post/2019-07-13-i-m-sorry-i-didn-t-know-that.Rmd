@@ -1,5 +1,5 @@
 ---
-title: I'm Sorry I Didn't Know That
+title: Google Trends & Ulysses S. Grant
 author: Daniel Baggett
 date: '2019-07-13'
 slug: i-m-sorry-i-didn-t-know-that
