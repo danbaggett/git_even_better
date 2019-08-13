@@ -17,7 +17,7 @@
       <pubDate>Tue, 13 Aug 2019 00:00:00 +0000</pubDate>
       
       <guid>/post/yelp-reviews-of-doctor-s-offices-analyzed/</guid>
-      <description>Yelp has kindly made a few datasets available for free for data analysts. I was particularly interested in running the reviews through sentiment analysis lexicons. I wondered how much the intensity of negative or postive reviews would change in relation to the type of business being reviewed. Medical offices seemed like a good fit to start with.
+      <description>Yelp has kindly made a dataset of reviews available for free for data analysts. I was particularly interested in running the reviews through sentiment analysis lexicons. I wondered how much the intensity of negative or postive reviews would change in relation to the type of business being reviewed. Medical offices seemed like a good fit to start with.
 For example: Are customers more likely to give a doctor’s office a negative or positive review than say a restaurant or a movie theatre?</description>
     </item>
     
