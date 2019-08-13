@@ -1,0 +1,250 @@
+---
+title: Medical Offices & One Star Reviews 
+author: Daniel Baggett
+date: '2019-08-13'
+slug: yelp-reviews-of-doctor-s-offices-analyzed
+categories: []
+tags: []
+authors: []
+---
+```{r include=FALSE}
+knitr::opts_chunk$set(
+  echo = FALSE
+)
+
+library(tidyverse)
+library(tidytext)
+library(lexicon)
+library(stm)
+library(quanteda)
+library(rebus.base)
+
+bing_sent <- get_sentiments("bing")
+reviews <- read_csv("/Users/dan/R/Song Lyrics Project/yelp_training_set_review.csv")
+```
+
+
+Yelp has kindly made a few datasets available for free for data analysts. I was particularly interested in running the reviews through sentiment analysis lexicons. I wondered how much the intensity of negative or postive reviews would change in relation to the type of business being reviewed. Medical offices seemed like a good fit to start with. 
+
+
+**For example:** Are customers more likely to give a doctor's office a negative or positive review than say a restaurant or a movie theatre? Will reviewers show more nuance with respect to higher-skill jobs?
+
+
+Below you can see how the data is divided. 
+
+* Yelp reviews from medical categories only. (These were routinely outpatient offices)
+
+* Yelp Reviews from every other type of business.
+
+```{r include = TRUE, echo = TRUE}
+doctors <- reviews %>% 
+  filter(str_detect(business_categories, "Doctors")) 
+
+reviews <- reviews %>% 
+  mutate(medical = ifelse(str_detect(business_categories, "Doctors"), TRUE, FALSE))
+```
+
+
+
+
+## No Room For The Middle
+```{r}
+doctors %>%
+  count(stars) %>% 
+  ggplot(aes(stars, n)) +
+  geom_col(show.legend = FALSE, fill = "#5DADE2") +
+  labs(title = "#1 - Medical Field Only",
+       subtitle = "Yelp Reviews",
+       x = "Stars Given By Customer",
+       y = "Reviews") +
+  theme_minimal() +
+  theme(panel.grid.minor=element_blank(),
+           panel.grid.major=element_blank()) 
+```
+
+
+```{r}
+reviews %>% 
+  filter(medical == FALSE) %>% 
+  count(stars) %>% 
+  ggplot(aes(stars, n)) +
+  geom_col(fill = "#F1948A", show.legend = FALSE) +
+  labs(title = "#2 - All Other Businesses",
+       subtitle = "Yelp Reviews",
+       x = "Stars Given By Customer",
+       y = "Reviews") +
+  theme_minimal() +
+  theme(panel.grid.minor=element_blank(),
+           panel.grid.major=element_blank()) +
+   theme(axis.title.x = element_blank()) 
+```
+
+* Medical offices are clearly playing by a different set of rules in the customer's mind.  
+<br/>
+* The middle of chart #1 is hollowed out when compared to chart #2.  
+<br/>
+* The polarization is best seen by comparing the four star distribution. Restraunts, theatres, etc. are reviewed with a bit more grace or nuance.  
+<br/>
+* The percentage of 5 star reviews are almost even between the two fields. If a patient has a good experience at a medical office, they are clearly willing to reciprocate and share their experience online. Obviously, the opposite is also true.  
+<br/>
+* Medical offices were **three times more likely** to receive a one star review on Yelp. 
+
+```{r}
+knitr::kable( 
+reviews %>% 
+  filter(medical == FALSE) %>% 
+  count(stars) %>% 
+  mutate(percent = n / sum(n) * 100) %>% 
+  filter(stars < 2) %>% 
+  mutate(percent = sum(percent)) %>% 
+  rename("All Businesses" = n))
+
+knitr::kable( 
+doctors %>% 
+  count(stars) %>% 
+  mutate(percent = n / sum(n) * 100) %>% 
+  filter(stars < 2) %>% 
+  mutate(percent = sum(percent)) %>% 
+  rename("Medical Offices" = n))
+
+```
+
+## Sentiment Analysis
+
+Why are medical offices receiving a higher proportion of negative reviews? A closer look a the most used words should provide some answers.
+
+First, the text from the reviews were tokenized and then filtered against a lexicon of stopwords. 
+
+```{r echo = TRUE, results = "hide"}
+#Tokenize Words
+doctors_nest <- doctors %>% 
+  select(business_id, stars, text) %>% 
+  unnest_tokens(word, text)
+
+#Remove Stop Words
+doctors_stop <- doctors_nest %>% 
+  anti_join(stop_words)
+```
+
+
+Beyond tokenizing the words, I also grouped some terms together. Reviwers often misspell words or use abbreviations. The code below shows how certain terms were group together. For example, "dr", "doctors", etc. were grouped together as simply "doctor." 
+
+```{r echo = TRUE}
+doctors_stop_coded <- doctors_stop %>% 
+  mutate(word = fct_collapse(word,
+          doctor = c("dr", "doctors", "doctor"),
+          "minutes, hours, etc." = c("minutes", "hours", "wait", "waiting", "time"),
+          numbers = c("2", "3", "5"),
+          money = c("bill", "money"),
+          "days, weeks, etc." = c("days", "weeks", "months"))) 
+```
+
+## 1 Star & 5 Star
+
+```{r}
+doctors_stop_coded %>% 
+  filter(stars == 1 & word != "numbers") %>% 
+  count(word, sort = "true") %>% 
+  filter(n > 30) %>% 
+  mutate(word = fct_reorder(word, n)) %>% 
+  ggplot(aes(word, n, fill = word)) +
+  geom_col(show.legend = FALSE) +
+  coord_flip() +
+  labs(title = "Most Mentioned Words in 1 Star Reviews") +
+  theme_minimal() +
+  theme(panel.grid.minor=element_blank(),
+           panel.grid.major=element_blank())
+
+doctors_stop_coded %>% 
+  filter(stars == 5 & word != "numbers") %>% 
+  count(word, sort = "true") %>% 
+  filter(n > 50) %>% 
+  mutate(word = fct_reorder(word, n)) %>% 
+  ggplot(aes(word, n, fill = word)) +
+  geom_col(show.legend = FALSE) +
+  coord_flip() +
+  labs(title = "Most Mentioned Words in 5 Star Reviews") +
+  theme_minimal() +
+  theme(panel.grid.minor=element_blank(),
+           panel.grid.major=element_blank())
+```
+
+* At first glance, these two charts appear identical. They are not!
+
+* These two charts make it clear: the doctor, the amount of time a patient waits, and the staff that a patient interacts with are the most critical elements to either a great or terrible experience. 
+
+
+## 1 Star Words
+```{r include=FALSE}
+one_and_five <- doctors_stop_coded %>% 
+  filter(stars == "1" | stars == "5") %>% 
+  count(stars, word, sort = "true") %>% 
+  filter(n > 30)
+
+compare_one_and_five <- one_and_five %>% 
+  spread(stars, n, fill = 0) %>%
+  filter(word != "numbers") %>% 
+  rename(five = "5", 
+         one = "1") %>% 
+  mutate(five_perc = five / sum(five) * 100,
+         one_perc = one / sum(one) * 100,
+         diff = five_perc - one_perc)
+```
+
+```{r include=FALSE}
+compare_one_and_five %>% 
+  filter(word == "friendly")
+```
+
+
+```{r}
+compare_one_and_five %>% 
+  filter(five_perc == "0") %>% 
+  arrange(desc(one_perc)) %>% 
+  mutate(word = fct_reorder(word, one_perc)) %>% 
+  ggplot(aes(word, one_perc, fill = word)) +
+  geom_col(show.legend = FALSE) +
+  coord_flip() +
+  labs(title= "Words Exclusive To One Star Reviews",
+       subtitle = "Yelp Dataset",
+       y = " ",
+       x = " ") +
+  theme_minimal() +
+  theme(panel.grid.minor=element_blank(),
+           panel.grid.major=element_blank()) +
+  theme(axis.title.x = element_blank()) +
+  theme(axis.ticks = element_blank(), axis.text.x = element_blank()) #Hides all at the bottom on X
+
+```
+
+* How could the word **"told"** be so high? Phrases like "She told me it cost x" or "I was told it would be x more minutes", etc. appeared repeatedly in one star reviews.  
+<br/>
+* The data also shows that outpaitent offices should be as realistic as possible in regards to wait times and costs. Patients obviously prefer bad news on the front end and they *really* don't like it when they feel like they were lied to.  
+<br/>
+* I expected the word "insurance" to rank much higher. If the reviews were based on hospitals, complaints related to insurance companies would likely appear more frequently. 
+<br/>
+## 5 Star Words
+```{r}
+compare_one_and_five %>% 
+  filter(one_perc == "0") %>% 
+  filter(five_perc > .8) %>% 
+  arrange(desc(five_perc)) %>% 
+  mutate(word = fct_reorder(word, five_perc)) %>% 
+  ggplot(aes(word, five_perc, fill = word)) +
+  geom_col(show.legend = FALSE) +
+  coord_flip() +
+  labs(title= "Words Exclusive To 5 Star Reviews",
+       y = " ",
+       x = " ") +
+  theme_minimal() +
+  theme(panel.grid.minor=element_blank(),
+           panel.grid.major=element_blank()) +
+  theme(axis.ticks = element_blank(), axis.text.x = element_blank()) #Hides all at the bottom on X
+
+```
+
+* The word "friendly" was used 122 times in the bank 5 Star Reviews. It was used 0 times in the set of 1 star reviews. 
+
+* Almost *everything* can wrong for a patient; and still, if a patient experiences kindness from just one person, the data shows that it actually does make a difference.  
+
+
